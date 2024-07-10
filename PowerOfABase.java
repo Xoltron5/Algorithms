@@ -13,6 +13,7 @@ public class PowerOfABase {
         try {
             System.out.print("Enter a base: ");
             base = scanner.nextInt();
+            
             System.out.print("Enter a power: ");
             power = scanner.nextInt();
 
