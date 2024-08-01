@@ -17,7 +17,7 @@ public class PowerOfABase {
             System.out.print("Enter a power: ");
             power = scanner.nextInt();
 
-            result = pow2(base, power);
+            result = pow(base, power);
             System.out.println("Result: " + result);
         } 
         catch (Exception e) {
@@ -29,7 +29,7 @@ public class PowerOfABase {
     }
 
     // O(Log n) Time Complexity O(1) Space Complexity
-    public static int pow2(int base, int power) {
+    public static int pow(int base, int power) {
 
         if (power == 0) {
             return 1;
@@ -53,7 +53,7 @@ public class PowerOfABase {
     }
 
     // O(n) Time Complexity O(1) Space Complexity
-    public static int pow(int base, int power) {
+    public static int pow2(int base, int power) {
 
         if (power == 0) {
             return 1;
@@ -70,5 +70,13 @@ public class PowerOfABase {
         }
 
         return result;
+    }
+
+    // O(n) Time Complexity O(n) Space Complexity
+    public static int pow3(int base, int power) {
+
+        if (power < 1) return 1;
+
+        return base * pow3(base, power - 1);
     }
 }

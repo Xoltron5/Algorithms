@@ -12,6 +12,7 @@ public class Factorial {
         System.out.println("Factorial: " + factorial(number));
     }
 
+    // O(n) Time Complexity O(1) Space Complexity 
     public static long factorial(int number) {
         long result = 1;
 
@@ -19,5 +20,13 @@ public class Factorial {
             result *= i;
         }
         return result;
+    }
+
+    // O(n) Time Complexity O(n) Space Complexity 
+    public static long factorial2(int number) {
+
+        if (number < 1) return 1;
+
+        return factorial(number - 1);
     }
 }
